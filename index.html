@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIK Score - Mayajaal x LIK</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ticker ticker-top">
+  <div class="ticker-inner"><span class="wikki-text">A WIKKI ORIGINAL</span> • <span class="anirudh-text">AN ANIRUDH MUSICAL</span> • MAYAJAAL PRESENTS • LIK MATCH METER • <span class="wikki-text">A WIKKI ORIGINAL</span> • <span class="anirudh-text">AN ANIRUDH MUSICAL</span> • MAYAJAAL PRESENTS • LIK MATCH METER •</div>
+</div>
+<div id="loaderView" class="view show-view">
+  <img src="page 1.png" class="loader-img pulse-special" alt="Loading LIK Meter..." onerror="this.style.display='none'">
+</div>
+<div id="homeView" class="view hidden-view">
+  <div class="home-robot-wrapper">
+    <div class="robot-inner">
+      <img src="robot.webp" alt="Robot Character" class="robot-img" onerror="this.style.display='none'">
+      <div class="glass-card">
+        <button class="btn-text-now" onclick="goToMeter()">CHECK SCORE NOW</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="meterView" class="view hidden-view">
+  <div id="robot_scan_overlay" class="scan-overlay">
+    <div class="scan-content">
+       <img src="robotload.webp" class="scan-robot-img" alt="Scanning Robot" onerror="this.style.display='none'">
+       <div class="calcpreload-main-title">SCANNING...</div>
+    </div>
+  </div>
+  <div class="bg-emojis left">💗✨🔥</div>
+  <div class="bg-emojis right">😍💖💥</div>
+  <img src="hero.webp" class="hero-img char-left" alt="Hero" onerror="this.style.display='none'">
+  <img src="heroine.webp" class="heroine-img char-right" alt="Heroine" onerror="this.style.display='none'">
+  <div class="meter-center">
+    <div class="logos-row">
+      <img src="mayajaal.png" class="maya-img meter-maya-img" alt="Mayajaal" onerror="this.style.display='none'">
+      <div class="x-text">X</div>
+      <img src="lik title.png" class="lik-title-img meter-lik" alt="LIK Logo" onerror="this.style.display='none'">
+    </div>
+    <div class="meter-subtitle">LOVE INSURANCE KOMPANY</div>
+    <div class="initials">
+      <div class="initial-circle avatar-circle" id="char_p">
+        <span class="short">P</span><span class="full">PRADEEP RANGANATHAN</span>
+      </div>
+      <div class="initial-circle avatar-circle" id="char_k">
+        <span class="short">K</span><span class="full">KRITHI SHETTY</span>
+      </div>
+    </div>
+    <div class="score-label">COMPATIBILITY SCORE</div>
+    <div class="score-wrapper">
+      <img src="hero.webp" class="mobile-char mobile-char-left" alt="Hero" onerror="this.style.display='none'">
+      <div class="score-number" id="scoreNum">00<span>%</span></div>
+      <img src="heroine.webp" class="mobile-char mobile-char-right" alt="Heroine" onerror="this.style.display='none'">
+    </div>
+    <div class="score-status" id="scoreStatus">READY TO SCAN</div>
+    <div class="score-quote" id="scoreQuote" style="display: none;"></div>
+    <div class="inputs">
+      <input type="text" id="subject_a" class="pill-input subject-input" placeholder="Insurer Name - HE" maxlength="20" autocomplete="off" onfocus="animateChar('p')" onblur="resetChars()">
+      <input type="text" id="subject_b" class="pill-input subject-input" placeholder="Insured Name - SHE" maxlength="20" autocomplete="off" onfocus="animateChar('k')" onblur="resetChars()">
+    </div>
+    <button class="btn-scan" id="scanBtn" onclick="runKompanyScan()">GET YOUR LIK SCORE</button>
+    <div id="action_buttons" class="hidden-actions">
+      <button class="btn-action" onclick="downloadLIK()">DOWNLOAD</button>
+      <button class="btn-action" onclick="shareLIK()">SHARE</button>
+    </div>
+    <div class="meter-footer">
+      <span class="">A Wikki Original</span> • <span class="">An Anirudh Musical</span>
+    </div>
+  </div>
+</div>
+<div class="ticker ticker-bottom">
+  <div class="ticker-inner">BOOK NOW LIK AT MAYAJAAL • BOOK NOW LIK AT MAYAJAAL • BOOK NOW LIK AT MAYAJAAL • BOOK NOW LIK AT MAYAJAAL • BOOK NOW LIK AT MAYAJAAL • BOOK NOW LIK AT MAYAJAAL •</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
